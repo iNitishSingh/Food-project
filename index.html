@@ -1,0 +1,203 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body onload="selectedCategory('Pizza')">
+    <header>
+      <nav class="nav-bar-container">
+        <div class="navbar-header">
+          <img src="images/img/logo.png" alt>
+        </div>
+        <div class="nav-container">
+          <div class="nav-bar-iteam">
+            <span><i class="glyphicon glyphicon-search"></i><a
+                style="text-decoration: none;" href="#">Search</a></span>
+            <span><i class="glyphicon glyphicon-tags"></i><a
+                style="text-decoration: none;" href="#">Offers</a></span>
+            <span id="cartsdetails" onclick="viewCart(this)"><i
+                class="glyphicon glyphicon-shopping-cart"></i><input
+                style="width: 20px; text-decoration-style: none;  border-radius:50% 60% 70% 80%;border-style: solid;"
+                id="iteamcount"
+                name="iteam-count" type="number" value="0" readonly><a
+                style="text-decoration: none;" href="#">Items</a></span>
+          </div>
+          <span><i class="glyphicon glyphicon-user"> </i><a
+              style="text-decoration: none;" href="#about">Login</a></span>
+        </div>
+      </nav>
+    </header>
+    <div class="col-md-2 side-nav-container">
+      <ul class="side-bar-list">
+        <li><a style="text-decoration:none;" href="#">About</a></li>
+        <li><a style="text-decoration:none;" href>Services</a></li>
+        <li><a style="text-decoration:none;" href>Your Order</a></li>
+        <li><a style="text-decoration:none;" href>Wish List</a></li>
+        <li><a style="text-decoration:none;" href>Cart</a></li>
+        <li><a style="text-decoration:none;" href>Contact</a></li>
+        <li><a style="text-decoration:none;" href>Checkout</a></li>
+      </ul>
+    </div>
+    <div class="col-md-2 cards-container" style="width:60%;">
+      <p id="cardtitle" class="card-title">Pizza</p>
+      <div class="cards">
+
+        <div class="card" id="pizza">
+          <div class="rating">
+            <i class="fa-solid fa-star" style="color: #e9d60c; "><span>4.7</span></i>
+            <i class="fa-solid fa-heart" style="color: #ff0f0f;"></i>
+          </div>
+          <img class="card__image" id="card__image1" src="images/img/pizza1.jpg"
+            alt>
+          <p id="Produt-Name1">Bacon Pizza</p>
+          <p id="Produt-price1">Price $39.90</p>
+          <div style="text-align: center;">
+            <button id="addtocart1" onclick="addtocart(this.id);"
+              style="background-color: rgb(23, 153, 0);padding:5px 80px 5px 80px; margin-bottom: 10px; border:solid rgb(0, 0, 0);color: rgb(255, 255, 255);">Add
+              to card</button>
+          </div>
+        </div>
+
+        <div class="card" id="card2">
+          <div class="rating">
+            <i class="fa-solid fa-star" style="color: #e9d60c; "><span>4.7</span></i>
+            <i class="fa-solid fa-heart" style="color: #ff0f0f;"></i>
+          </div>
+          <img class="card__image" id="card__image2" src="images/img/pizza2.jpg"
+            alt>
+          <p id="Produt-Name2">Bacon Pizza</p>
+          <p id="Produt-price2">Price $39.90</p>
+          <div style="text-align: center;">
+            <button id="addtocart2" onclick="addtocart(this.id)"
+              style="background-color: rgb(23, 153, 0);padding:5px 80px 5px 80px; margin-bottom: 10px; border:solid black;color: rgb(255, 255, 255);">Add
+              to card</button>
+          </div>
+        </div>
+        <div class="card" id="card3">
+          <div class="rating">
+            <i class="fa-solid fa-star" style="color: #e9d60c; "><span>4.7</span></i>
+            <i class="fa-solid fa-heart" style="color: #ff0f0f;"></i>
+          </div>
+          <img class="card__image" id="card__image3" src="images/img/pizza3.jpg"
+            alt>
+          <p id="Produt-Name3">Bacon Pizza</p>
+          <p id="Produt-price3">Price $39.90</p>
+          <div style="text-align: center;">
+            <button id="addtocart3" onclick="addtocart(this.id)"
+              style="background-color: rgb(23, 153, 0);padding:5px 80px 5px 80px; margin-bottom: 10px; border:solid black;color: rgb(255, 255, 255);">Add
+              to card</button>
+          </div>
+        </div>
+        <div class="card" id="card4">
+          <div class="rating">
+            <i class="fa-solid fa-star" style="color: #e9d60c; "><span>4.7</span></i>
+            <i class="fa-solid fa-heart" style="color: #ff0f0f;"></i>
+          </div>
+          <img class="card__image" id="card__image4"
+            src="images/img/pizza4.jpeg" alt>
+          <p id="Produt-Name4">Bacon Pizza</p>
+          <p id="Produt-price4">Price $39.90</p>
+          <div style="text-align: center;">
+            <button id="addtocart4" onclick="addtocart(this.id)"
+              style="background-color: rgb(23, 153, 0);padding:5px 80px 5px 80px; margin-bottom: 10px; border:solid black;color: rgb(255, 255, 255);">Add
+              to card</button>
+          </div>
+        </div>
+        <div class="card" id="card5">
+          <div class="rating">
+            <i class="fa-solid fa-star" style="color: #e9d60c; "><span>4.7</span></i>
+            <i class="fa-solid fa-heart" style="color: #ff0f0f;"></i>
+          </div>
+          <img class="card__image" id="card__image5"
+            src="images/img/pizza5.jpeg" alt>
+          <p id="Produt-Name5">Bacon Pizza</p>
+          <p id="Produt-price5">$ 39.90</p>
+          <div style="text-align: center;">
+            <button id="addtocart5" onclick="addtocart(this.id)"
+              style="background-color: rgb(23, 153, 0);padding:5px 80px 5px 80px; margin-bottom: 10px; border:solid black;color: rgb(255, 255, 255);">Add
+              to card</button>
+          </div>
+        </div>
+        <div class="card" id="card6">
+          <div class="rating">
+            <i class="fa-solid fa-star" style="color: #e9d60c; "><span>4.7</span></i>
+            <i class="fa-solid fa-heart" style="color: #ff0f0f;"></i>
+          </div>
+          <img class="card__image" id="card__image6"
+            src="images/img/pizza6.jpeg" alt>
+          <p id="Produt-Name6">Bacon Pizza</p>
+          <p id="Produt-price6">Price $39.90</p>
+          <div style="text-align: center;">
+            <button onclick="addtocart(this.id)" id="addtocart6"
+              style="background-color: rgb(23, 153, 0);padding:5px 80px 5px 80px; margin-bottom: 10px; border:solid black;color: rgb(255, 255, 255);">Add
+              to card</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 menu-list-container">
+      <p><u>Go Fo</u>r Hunt</p>
+      <ul class="menu-list">
+        <li><img src="images/img/pizza1.jpg" alt><a
+            style="text-decoration:none;" href="#" id="Pizza" value="Pizza"
+            onclick="selectedCategory('Pizza')">Pizza</a></li>
+        <li><img src="images/img/biryani1.jpg" alt><a
+            style="text-decoration:none;" href="#" id="Biryani" value="Biryani"
+            onclick="selectedCategory('Biryani')">Biryani</a></li>
+        <li><img src="images/img/chicken1.jpg" alt><a
+            style="text-decoration:none;" href="#" id="Chicken"
+            onclick="selectedCategory('Chicken')">Chicken</a></li>
+        <li><img src="images/img/paneer.jpeg" alt><a
+            style="text-decoration:none;" href="#">Paneer</a></li>
+        <li><img src="images/img/vegitable.jpg" alt><a
+            style="text-decoration:none;" href="#">Vegetable</a></li>
+        <li><img src="images/img/chinese.jpeg" alt><a
+            style="text-decoration:none;" href="#">Chinese</a></li>
+        <li><img src="images/img/soth.jpg" alt><a
+            style="text-decoration:none;" href="#">South Indian </a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="cartsidebar">
+  <div style="text-align: end;">
+    <button class="glyphicon glyphicon-remove"
+      style="font-size: 30px; border-radius: 50px; border-style:solid;"
+      onclick="closeCart();"><buttton>
+      </div>
+      <div class="carts">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+          <div class="cart-box">
+            <img src="images/img/biryani1.jpg" alt="" class="cart-img">
+            <div class="details-box">
+              <div class="cartproducttitle">BACKPACK</div>
+            <div class="cart-price">$0</div>
+            <input type="number" value="1" class="cart-quantity" readonly>
+            </div>
+            <i class="glyphicon glyphicon-trash"></i>
+
+          </div>
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+          </div>
+          <!-- buy button -->
+          <button class="btn-buy">byu Now</button>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
