@@ -40,20 +40,20 @@ let cart=[];
 var itemcount=0;
 var final_cart=[]
 function addtocart(product_id){
-    let itemValueCount = parseInt(document.getElementById('iteamcount').value);
+    let itemValueCount = parseInt(document.getElementById('iteamcount').innerHTML);
     console.log(itemValueCount)
     itemcount = itemValueCount+1;
     console.log(itemcount);
-    document.getElementById('iteamcount').value = itemcount;
+    document.getElementById('iteamcount').innerHTML = itemcount;
     let categorySelected=document.getElementById('cardtitle').innerHTML
     console.log(categorySelected);
     product_id=parseInt(product_id.charAt(product_id.length-1))
     console.log(product_id);
     cart.push({category:`${categorySelected}`,product:product_id})
     console.log(cart)
-    for(j=1;j<=cart.length;j++){
+    for(j=0;j<cart.length;j++){
         let obje = product.find((o,i) => {
-            if (o.category==cart[j-1].category) {
+            if (o.category==cart[j].category) {
                 return true // stop searching
             
         }
